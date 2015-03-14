@@ -1,7 +1,17 @@
 redis:
     image: redis:latest 
+    hostname: redis
     ports:
         - "6379:6379"
     volumes:
         - /tmp/redis:/data
     command: redis-server --appendonly yes 
+
+rabbitmq:
+    image: rabbitmq:latest 
+    hostname: rabbitmq
+    ports:
+        - "5672:5672"
+        - "15672:15672"
+    volumes:
+        - /tmp/rabbitmq:/var/lib/rabbitmq
