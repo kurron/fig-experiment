@@ -47,3 +47,11 @@ mysql:
         MYSQL_USER: mysql
         MYSQL_PASSWORD: mysql
         MYSQL_DATABASE: example
+
+mongodb:
+    image: mongo:latest 
+    hostname: mongodb
+    ports:
+        - "27017:27017"
+    volumes:
+        - /tmp/mongodb:/data/db
