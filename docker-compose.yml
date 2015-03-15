@@ -61,3 +61,14 @@ memcached:
     hostname: memcached
     ports:
         - "11211:11211"
+
+elasticsearch:
+    image: elasticsearch:latest 
+    hostname: elasticsearch
+    ports:
+        - "9200:9200"
+        - "9300:9300"
+    volumes:
+        - /tmp/elasticsearch:/usr/share/elasticsearch/data
+
+
