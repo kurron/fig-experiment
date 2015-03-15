@@ -34,3 +34,16 @@ nginx:
         - "8443:443"
     volumes:
         - /tmp/nginx:/var/cache/nginx
+
+mysql:
+    image: mysql:latest 
+    hostname: mysql
+    ports:
+        - "3306:3306"
+    volumes:
+        - /tmp/mysql:/var/lib/mysql
+    environment:
+        MYSQL_ROOT_PASSWORD: mysql
+        MYSQL_USER: mysql
+        MYSQL_PASSWORD: mysql
+        MYSQL_DATABASE: example
