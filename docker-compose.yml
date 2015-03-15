@@ -15,6 +15,7 @@ rabbitmq:
         - "15672:15672"
     volumes:
         - /tmp/rabbitmq:/var/lib/rabbitmq
+
 postgres:
     image: postgres:latest 
     hostname: postgres
@@ -24,3 +25,12 @@ postgres:
         - /tmp/postgresql:/var/lib/postgresql/data
     environment:
         POSTGRES_PASSWORD: posgres
+
+nginx:
+    image: nginx:latest 
+    hostname: nginx
+    ports:
+        - "8080:80"
+        - "8443:443"
+    volumes:
+        - /tmp/nginx:/var/cache/nginx
