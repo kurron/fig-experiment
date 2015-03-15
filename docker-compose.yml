@@ -55,3 +55,9 @@ mongodb:
         - "27017:27017"
     volumes:
         - /tmp/mongodb:/data/db
+
+memcached:
+    image: memcached:latest 
+    hostname: memcached
+    ports:
+        - "11211:11211"
